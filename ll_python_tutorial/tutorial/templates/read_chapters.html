@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="{% static 'brain.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'chapters.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <script src="{% static 'chapters.js' %}"></script>
+
+
+</head>
+<body>
+<div id="mySidenav" class='leftMenu'>
+    <a href="javascript:void(0)" class="closebtn" id="closeButton">&times;</a>
+    {% for chapter in chapter_list %}
+    <a href="/tutorial/read_chapters/{{ chapter.name }}">{{ chapter.displayName }}</a>
+    {% endfor %}
+</div>
+<span id="drawer">&#9776;</span>
+<div id='main'>
+    <div class="title"> {{ title }}</div>
+    <div class="content">
+        {{ content }}
+    </div>
+    {% for exercise in exercises%}
+    <div class="exerciseTitle"> {{ exercise.title }}</div>
+    <div class="content">
+        {{ exercise.description }}
+    </div>
+    {% endfor %}
+
+</div>
+
+
+<div class="downloadButton">
+    <button id="pdf_button" class="myButton">generate PDF</button>
+</div>
+</body>
+</html>

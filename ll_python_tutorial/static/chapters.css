@@ -1,0 +1,144 @@
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.leftMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.leftMenu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.leftMenu a:hover {
+  color: #f1f1f1;
+}
+
+.leftMenu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 150px
+}
+
+.title{	
+   text-align: center;
+   font-size: 55px;
+   color: black;
+   padding-bottom: 50px;
+}
+
+.exerciseTitle{	
+   text-align: center;
+   font-size: 25px;
+   color: black;
+   padding-bottom: 50px;
+   padding-top: 10px;
+   padding-botton: 10px;
+   text-align:left;
+}
+
+
+.content{
+	padding-bottom: 50px;
+
+}
+
+
+
+.saveButton{
+	right: 150px;
+	padding-left: 600px;
+}
+
+
+.deleteButton{
+	right: 150px;
+	margin-top:-70px;
+}
+
+.downloadButton{
+	right: 150px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 900px;
+}
+
+.myButton {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.saveDeleteButtons{
+
+}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .leftMenu {padding-top: 15px;}
+  .leftMenu a {font-size: 18px;}
+}
+
+
+#drawer {
+	font-size:30px;
+	cursor:pointer;
+}
+
+.left_menu_open{
+    width:20vw;
+}
+
+.left_menu_closed{
+    width:0vw;
+}
+
+.main_menu_open{
+     margin-left:20vw;
+}
+
+.main_menu_closed{
+     margin-left:0px
+}
+
+.topmenu{
+
+}
+
+.newchapter{
+
+}
+
+.closebtn{
+
+}
