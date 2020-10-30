@@ -6,7 +6,7 @@ SECRET_KEY = '+sv)qbj)zy$e*d+gnzzl-#xzt!qf3mc0(wx0fd-5=mv(k0z&=n'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lukal.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
