@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="{% static 'brain.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'chapters.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'chapters_edit.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'chapters.js' %}"></script>
+    <script src="{% static 'chapters_edit.js' %}"></script>
+</head>
+<body>
+<div id="mySidenav" class='leftMenu'>
+    <div class="topmenu">
+        <a class="newchapter" href="/tutorial/edit_chapters/">new</a>
+        <a href="javascript:void(0)" class="closebtn" id="closeButton">&times;</a>
+    </div>
+    {% for chapter in chapter_list %}
+    <a href="/tutorial/edit_chapters/{{ chapter.name }}">{{ chapter.displayName }}</a>
+    {% endfor %}
+</div>
+<span id="drawer">&#9776;</span>
+<div id='main'>
+    <div class="tab">
+        <button class="tablinks" id="chapters_tab_button">Chapter</button>
+        <button class="tablinks" id="exercises_tab_button">Exercises</button>
+    </div>
+    <div id="chapterTab" class="tabcontent">
+        {% include 'edit_chapter/edit_chapter.html' %}
+    </div>
+    <div id="exercisesTab" class="tabcontent">
+        {% include 'edit_chapter/edit_exercise.html' %}
+    </div>
+</div>
+</body>
+</html>

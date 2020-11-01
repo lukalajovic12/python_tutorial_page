@@ -1,0 +1,29 @@
+ <div class="title"> {{ title }}</div>
+        <div class="content">
+            <form id="" action="" method="post" accept-charset="utf-8" class="form-signin">
+                {% csrf_token %}
+                <div class="chapter_div">
+                    <label for="name"> name:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder=""
+                           value="{{ chapter.name }}"
+                           {{
+                           readonlyValue }}>
+                    <br>
+                    <label for="displayName">displayName:</label>
+                    <input type="text" id="displayName" name="displayName" class="form-control" placeholder=""
+                           value="{{ chapter.displayName }}">
+                    <br>
+                    <label for="content">content:</label>
+                    <textarea id="content " name="content" ng-model="myText" rows="10"
+                              cols="150">{{ chapter.content }}</textarea>
+                </div>
+                <br>
+        </div>
+        <div class="saveButton">
+            <button name="submit" type="submit" class="myButton">save</button>
+        </div>
+        <br>
+        <div class="deleteButton">
+            <button name="delete" type="submit" class="myButton">delete</button>
+        </div>
+        </form>
