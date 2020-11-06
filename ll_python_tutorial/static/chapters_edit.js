@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-    openTab('chapterTab');
     $('#chapters_tab_button').click(function(){
         openTab('chapterTab');
     })

@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-
     $("#main").addClass("main_menu_open");
     $("#mySidenav").addClass("left_menu_open");
     $("#closeButton").click(function(){
@@ -9,18 +8,15 @@ $(document).ready(function(){
              $("#mySidenav").addClass("left_menu_closed");
             $("#main").addClass("left_menu_closed");
   });
-
       $("#drawer").click(function(){
              $("#mySidenav").removeClass("left_menu_closed");
             $("#main").removeClass("main_menu_closed");
             $("#mySidenav").addClass("left_menu_open");
             $("#main").addClass("main_menu_open");
   });
-
       $('#pdf_button').click(function(){
         downloadPdf();
     });
-  
 });
 
 

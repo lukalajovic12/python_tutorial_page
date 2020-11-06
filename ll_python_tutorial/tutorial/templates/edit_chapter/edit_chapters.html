@@ -23,15 +23,13 @@
 <span id="drawer">&#9776;</span>
 <div id='main'>
     <div class="tab">
-        <button class="tablinks" id="chapters_tab_button">Chapter</button>
-        <button class="tablinks" id="exercises_tab_button">Exercises</button>
+        <button class="tablinks"><a class="newchapter" href="/tutorial/edit_chapters/{{ chapterName }}">chapter</a></button>
+        {% if showExercise %}
+        <button class="tablinks"><a class="newchapter" href="/tutorial/edit_exercise/{{ chapterName }}">exercises</a></button>
+        {%  endif  %}
     </div>
-    <div id="chapterTab" class="tabcontent">
-        {% include 'edit_chapter/edit_chapter.html' %}
-    </div>
-    <div id="exercisesTab" class="tabcontent">
-        {% include 'edit_chapter/edit_exercise.html' %}
-    </div>
+        {% block editor %}
+        {% endblock %}
 </div>
 </body>
 </html>

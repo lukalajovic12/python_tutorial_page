@@ -1,1 +1,21 @@
-Jared Kuschner is a complete peace of shit
+{% extends 'edit_chapter/edit_chapters.html' %}
+{% block editor %}
+<div class="title"> Exercise</div>
+<div class="content">
+    <form id="" action="" method="post" accept-charset="utf-8" class="form-signin">
+        {% csrf_token %}
+        {{ exerciseForm.as_ul }}
+        <div class="saveButton">
+            <button name="submit_exercise" type="submit" class="myButton">save</button>
+        </div>
+        <br>
+        <div class="deleteButton">
+            <button name="delete_exercise" type="submit" class="myButton">delete</button>
+        </div>
+    </form>
+    <div class="title"> Exercises</div>
+    {% for exercise in exercise_list %}
+    <a href="/tutorial/edit_exercise/{{ chapterName }}/{{ exercise.title}}" {{ exercise.title}}/>{{ exercise.title }}</a>
+    {% endfor %}
+</div>
+{% endblock %}
