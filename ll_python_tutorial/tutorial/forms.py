@@ -2,8 +2,8 @@
 from django.forms import ModelForm
 from django import forms
 
-from ll_python_tutorial.tutorial.models import Exercise
-from ll_python_tutorial.tutorial.views import Chapter
+from . models import Exercise
+from . models import Chapter
 
 
 class ChapterForm(ModelForm):

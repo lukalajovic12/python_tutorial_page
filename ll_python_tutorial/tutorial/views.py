@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
-from ll_python_tutorial.tutorial.models import Chapter, Exercise
-from ll_python_tutorial.tutorial.forms import ChapterForm, ExerciseForm
+from . models import Chapter, Exercise
+from . forms import ChapterForm, ExerciseForm
 
 def read_chapters(request, chapter_name=""):
     context = {}
